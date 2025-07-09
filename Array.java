@@ -1,4 +1,4 @@
-1) Write a Java program to declare, initialize and accessing the elements of Single dimensional Arrays, Multidimensional Arrays.
+//1) Write a Java program to declare, initialize and accessing the elements of Single dimensional Arrays, Multidimensional Arrays.
 
   public class Array {
     public static void main(String[] args) {
