@@ -1,3 +1,4 @@
+//2. Write a Java program to demonstrate static Variable, static method and static block.//
 public class Static {
     static int number;
     static {
