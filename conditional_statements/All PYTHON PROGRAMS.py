@@ -38,7 +38,7 @@ print(f"Total: ₹{price * qty:.2f}")  # Format the total to two decimal places
 # 9.Grade a student based on percentage
 marks = float(input("Enter percentage: "))  # Take percentage as input
 # Assign grades based on percentage ranges and print the grade
-("A" if marks >= 90 else "B" if marks >= 75 else "C" if marks >= 50 else "D")
+print("A" if marks >= 90 else "B" if marks >= 75 else "C" if marks >= 50 else "D")
 
 # 10.Check if a character is a vowel or consonant
 char = input("Enter character: ")[0]  # Take a character as input
