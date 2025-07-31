@@ -1,0 +1,22 @@
+6. Write a Java program to create and handle one or more user-defined exceptions with meaningful messages.
+// Create a simple custom exception
+class SmallNumberException extends Exception {
+    public SmallNumberException(String message) {
+        super(message);
+    }
+}
+
+public class SimpleExample {
+    public static void main(String[] args) {
+        int number = 5;
+
+        try {
+            if (number < 10) {
+                throw new SmallNumberException("Number is too small!");
+            }
+            System.out.println("Number is big enough.");
+        } catch (SmallNumberException e) {
+            System.out.println("Caught Exception: " + e.getMessage());
+        }
+    }
+}
