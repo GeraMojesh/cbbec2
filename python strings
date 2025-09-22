@@ -1,0 +1,80 @@
+#Length of a string:
+s = "example"
+print(len(s))
+
+#Count character frequency:
+s = "example"
+print({c: s.count(c) for c in set(s)})
+
+#String made of first 2 and last 2 chars or empty if length < 2:
+s = "example"
+print(s[:2] + s[-2:] if len(s) >= 2 else "")
+
+#Add 'ing' or 'ly' based on conditions:
+s = "play"
+print(s + ("ly" if s.endswith("ing") else "ing") if len(s) >= 3 else s)
+
+#Remove nth index character:
+s, n = "example", 2
+print(s[:n] + s[n+1:])
+
+#Remove characters with odd index values:
+s = "example"
+print(s[::2])
+
+#Count occurrences of each word:
+sentence = "this is a test this is only a test"
+print({w: sentence.split().count(w) for w in set(sentence.split())})
+
+#Input and display upper and lower case:
+s = input()
+print(s.upper(), s.lower())
+
+#Reverse string if length multiple of 4:
+s = "teststring"
+print(s[::-1] if len(s) % 4 == 0 else s)
+
+#Convert to uppercase if at least 2 uppercase in first 4 chars:
+s = "TeSting"
+print(s.upper() if sum(c.isupper() for c in s[:4]) >= 2 else s)
+
+#Check if string starts with specified characters:
+s, prefix = "example", "ex"
+print(s.startswith(prefix))
+
+#Count occurrences of substring:
+s, sub = "example example", "ex"
+print(s.count(sub))
+
+#Check if string is palindrome:
+s = "madam"
+print(s == s[::-1])
+
+#Reverse words in a string:
+s = "hello world"
+print(" ".join(s.split()[::-1]))
+
+#Count vowels, consonants, digits, special chars:
+s = "Hello123!"
+print(sum(c in "aeiouAEIOU" for c in s), sum(c.isalpha() and c not in "aeiouAEIOU" for c in s), sum(c.isdigit() for c in s), sum(not c.isalnum() for c in s))
+
+#Extract domain from email:
+email = "user@example.com"
+print(email[email.find("@")+1:])
+
+#First non-repeating character:
+s = "swiss"
+print(next((c for c in s if s.count(c) == 1), None))
+
+#irst repeated character:
+s = "swiss"
+print(next((c for c in s if s.count(c) > 1), None))
+
+#remove space:
+s = "a b c"
+print(s.replace(" ", ""))
+
+#Find common characters in two strings or print message:
+s1, s2 = "apple", "grape"
+common = set(s1) & set(s2)
+print("".join(common) if common else "No common characters")
